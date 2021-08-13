@@ -36,7 +36,11 @@ export default {
 	},
 	methods: {
 		submitForm(){
-			
+			this.$router.push('/index')
+		},
+		resetForm(){
+			const data = this.$options.data()
+			Object.assign(this.ruleForm, data.ruleForm)
 		}
 	}
 }

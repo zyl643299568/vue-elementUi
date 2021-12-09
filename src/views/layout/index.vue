@@ -156,7 +156,6 @@
     // },
 		created(){
 			this.localPath = window.sessionStorage.getItem('activePath')
-			console.log(this.localPath, '==created this.localPath');
 		},
 		methods: {
 			logOut(){
@@ -167,18 +166,11 @@
 				this.isCollapse = !this.isCollapse
 			},
 			saveMenuItem(path){
-				console.log(path, '-=-');
 				window.sessionStorage.setItem('activePath', path)
 				// this.localPath = path
 				// console.log(this.localPath, '--this.localPath');
 			}
     },
-		watch: {
-			$route () {
-				console.log(this.$route.matched[0].path, '9090909')
-				this.localPath = this.$route.matched[0].path
-			}
-		}
   };
 </script>
 <style scoped>

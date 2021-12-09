@@ -6,6 +6,7 @@ import index from '@/views/layout/index.vue'
 import login from '@/views/login/index.vue'
 import home from '@/views/home.vue'
 import mergeTable from '@/views/mergeTable.vue'
+import quillEditor from '@/views/quillEditor/index.vue'
 
 Vue.use(Router)
 Vue.use(ElementUI)
@@ -33,11 +34,15 @@ const router =  new Router({
         }
       ]
     },
-    
     {
       path: '/mergeTable',
       name: 'mergeTable',
       component: mergeTable
+    },
+    {
+      path: '/quillEditor',
+      name: 'quillEditor',
+      component: quillEditor
     }
   ]
 })
